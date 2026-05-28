@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Placement Predictor</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h2>Student Placement Predictor</h2>
+            {% if result %}
+            <div class="message success">{{ result }}</div>
+            {% elif error %}
+            <div class="message error">{{ error }}</div>
+            {% endif %}
+            <form action="/predict" method="POST">
+                <div class="form-group">
+                    <label for="cgpa">CGPA</label>
+                    <input type="number" step="0.01" id="cgpa" name="cgpa" placeholder="Enter CGPA" value="{{ cgpa or '' }}" required>
+                </div>
+                <div class="form-group">
+                    <label for="iq">IQ Score</label>
+                    <input type="number" id="iq" name="iq" placeholder="Enter IQ score" value="{{ iq or '' }}" required>
+                </div>
+                <button type="submit">Predict Status</button>
+            </form>
+            <footer>Submit the values to see placement prediction.</footer>
+        </div>
+    </div>
+</body>
+</html>
