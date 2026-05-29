@@ -8,6 +8,10 @@ A lightweight Flask app that predicts student placement (Placed / Not Placed) us
 - Predict endpoint (`/predict`) accepts form submissions.
 - Model persisted as `model/model.pkl` so the app can be served without retraining.
 
+## Demo Video Link
+
+- YouTube: https://youtu.be/C1y1yUthcWE?si=x6Lxy4_LGaVRG3gG
+
 ## Files
 
 - `app.py` — Flask application and prediction route.
